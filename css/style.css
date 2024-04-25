@@ -1,0 +1,1145 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    /* font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Mono', monospace; */
+}
+body{
+    width: 100vw;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto Mono', monospace; 
+    font-style: italic;
+    font-style: italic;
+}
+/* Header CSS */
+/* this is making the header sticky and styling the header */
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    color: #f3f3ff;
+    height: 5.5rem;
+    width: 99.8vw;
+    /* this is to give a transparent hint to the background color */
+    background-color: rgba(14, 13,13, 0.6); /* Red color with 50% opacity */
+}
+
+/* this is styling the navbar */
+header nav{
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* this is setting the logo for the nav */
+header nav .logo{
+    height: 9rem;
+    overflow: hidden;
+}
+header nav .logo svg{
+    margin-top: 3rem;
+}
+/* this is making the nav links in making a single line */
+header nav div  ul{
+    display: flex;
+}
+/* this is styling the links */
+header nav div div ul li{
+    padding-left: 1rem;
+    padding: .7rem;
+    list-style: none;
+}
+header nav div div ul li a{
+    text-decoration: none;
+    color: #f7f7ff;
+
+}
+.menuToggle{
+    display: none;
+}
+/* this code is for making the navbar responsive */
+@media (max-width: 649px) {
+    header nav{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    header nav .logo svg{
+        margin-top: 0rem;
+    }
+    header nav .navSmall{
+        padding-right: 2rem;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .links{
+        display: none;
+    }
+    .menuToggle{
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2rem;
+        margin-top: 2rem;
+    }
+    .hamburger {
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+    }
+    .navActive{
+        position: relative;
+    }
+    .active{
+        display: flex;
+        background-color: black;
+        margin-top: -3.5rem;
+    }
+    .active ul{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* home page */
+/* this code for the background image in home page */
+.homePage .backgroundImg{
+    background-image: url('../images/fordDrift.png');
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+
+.homePage main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* this code is for the hero section */
+.homePage main .hero{
+    background-color: rgb(136, 171, 185);
+    color: white;
+    overflow:hidden;
+    border-radius: 1rem;
+}
+/* this code is for the hero image of the home page */
+.homePage main .hero .heroImage{
+    max-width: 100%;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    overflow: hidden;
+}
+/* this is to set the img of the hero section  */
+.homePage main .hero .heroImage img{
+    max-width: 100%;
+    max-height: 100%;
+    width: 100vw;
+}
+.homePage main .hero div:nth-child(2){
+    padding: 1rem;
+    text-align: center;
+}
+/* this is styling the aboutcar  */
+.homePage main .aboutCar{
+    margin-top: 1rem;
+    background-color: #316466;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    width: 70vw;
+    min-height: 15rem;
+    font-size: large;
+    opacity: .8;
+    color: white;
+    padding: 2rem;
+}
+.homePage main .aboutCar p{
+    text-align: center;
+}
+/* this is styling the learn more button */
+.homePage main .learnMore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    background-color: rgb(156, 201, 196);
+    padding: 1rem;
+    
+}
+/* this is to give the hover effect  */
+.homePage main .learnMore:hover{
+    background-color: rgb(134, 168, 165);
+
+}
+.homePage main .learnMore a{
+    text-decoration: none;
+    color: white;
+}
+/*  */
+/* this is to give hovereffect on timeline items */
+.homePage .timeLine .timeLineItem:hover{
+    scale: 1.1;
+}
+/* this is styling the  timeline div */
+.homePage .timeLine{
+    width: 95%;
+    background-color: rgba(235, 247, 245, 0.1); /* Red color with 50% opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem auto;
+    padding-bottom: 3rem;
+}
+.homePage .timeLine h3{
+    text-align: center;
+    margin: 2rem;
+    font-size: 2rem;
+}
+.homePage .timeLine h4{
+    text-align: center;
+    margin: 2rem;
+    font-size: 1.3rem;
+}
+.homePage .timeLine p{
+    text-align: center;
+}
+/* this is styling a single row in timeline  */
+.homePage .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* this is making sure that the dimentions of the empty and the filled div are same  */
+.homePage .timeLine .empty,
+.homePage .timeLine .timeLineItem{
+    width: 48%;
+    height: 13rem; 
+    padding: 1.5rem;
+    text-align: center;
+}
+
+
+/* this is to give background color to timeline item */
+.homePage .timeLine .timeLineItem{
+    background-color: rgb(57, 101, 112);
+}
+.homePage .timeLine .timeLineLine{
+
+    width: .5rem;
+    height:16rem; 
+}
+.homePage .timeLineLine {
+  position: relative;
+  width: .5rem;
+  height: 16rem;
+  background-color: #317d86;
+  border-radius: 0;
+}
+/* this is to make the cirlce on top of the line */
+.homePage .timeLineLine::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -6px;
+  width: 18px;
+  height: 1rem;
+  background-color: #6b98a0;
+  border-radius: 50%;
+
+}
+/* this is to make the home page timeline responsive */
+@media (max-width: 900px){
+    
+    .homePage .timeLine .timeLineItem{
+        width: 48%;
+        height: 28rem; 
+        padding: 1.5rem;
+        text-align: center;
+    }
+    .homePage .timeLine .timeLineLine{
+        width: .5rem;
+        height:31rem; 
+    }
+}
+@media (max-width: 640px){
+    
+    .homePage .timeLine .timeLineItem{
+        width: 48%;
+        height: 38rem; 
+        padding: 1.5rem;
+        text-align: center;
+    }
+    .homePage .timeLine .timeLineLine{
+        width: .5rem;
+        height:41rem; 
+    }
+}
+/* this is styling the video div  */
+.homePage .videoPlayback{
+
+    margin: 2rem 0rem;
+}
+.homePage .videoPlayback h5{
+    text-align: center;
+    margin: 2rem;
+    font-size: 1.5rem;
+
+}
+
+
+
+/* this code is for the game in the last of the home page */
+.game h5{
+    margin: 2rem;
+    font-size: 1.2rem
+}
+.game{
+    margin-top: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.bg{
+    background-color: rgb(104, 160, 160);
+    width: 90vw;
+    border-radius: 1rem 1rem 0 0 ;
+
+}
+/* this is styling the div to make it see like a car  */
+.car{
+    width: 10rem;
+    height: 10rem;
+    animation: move 9s infinite linear;
+    background-image: url(../images/carOutline.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: animation-duration 0.3s ease;
+}
+/* these are the keyframes to make the car move  */
+@keyframes move {
+    0%{
+        transform: translateX(-3rem);
+    }
+    100%{
+        transform: translateX(85vw);
+    }
+}
+/* this is styling the button to slow or make the car fast to go  */
+.game .btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(109, 170, 170);
+    border-radius: 0 0 1rem 1rem;
+
+    width: 90vw;
+}
+.game .btns div{
+    background-color: rgb(76, 139, 131);
+    padding: 1rem;
+    margin: .7rem;
+    border-radius: 1rem;
+    width: 3rem;
+    text-align: center;
+}
+.game .btns div:hover{
+    background-color: rgb(101, 178, 167);
+}
+/* product page */
+/* this is setting the background image for the product page */
+.productPage .backgroundImg{
+    background-image: url('../images/fordFront1.png');
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+.productPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* this is for styling the hero part of the product page */
+.productPage .hero{
+    color: rgb(255, 255, 255);
+    overflow:hidden;
+    border-radius: 1rem;
+    text-align: center;
+}
+/* this is styling the heroimage part  */
+.productPage.hero .heroImage{
+    max-width: 100%;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+.productPage .hero .heroImage img{
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+}
+/* this is styling the background and stage for the collage */
+.collage {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.collage h2 {
+   font-size: 2rem;
+}
+/* this is setting up the div for the collage */
+.collage  div{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+.collage div .imgs{
+    /* border-radius: 1rem ; */
+    margin: .3rem;
+    width: 20rem;
+    height: 20rem;
+    overflow: hidden;
+}
+/* setting up the image size in the collage */
+.collage div .imgs img{
+    width: 20rem;
+    height: 20rem;
+    transition: .7s ease-in-out;  
+}
+.collage div .imgs:hover img{
+    scale: 1.2;
+}
+/* this is styling the models section */
+.models{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 5rem;
+}
+.models h2 {
+    font-size: 2rem;
+ }
+ /* this is setting the basic struce for the models  */
+.models div{
+    background-color: rgb(125, 168, 172);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: all 1s ease;
+    opacity: .85;
+}
+.models div:hover{
+    transform: rotate(5deg);
+}
+.models div:nth-child(3):hover{
+    transform: rotate(-5deg);
+}
+.models div .modelImg{
+    height: 25em; 
+    width: 40em;
+}
+/* this is giving the width and height of the images in the model div  */
+.models div .modelImg img{
+    width: inherit; 
+    height: inherit;
+}
+/* this is setting the data div of the model */
+.models div .modelAbout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+    text-align: center;
+    width: 40%;
+}
+.models div .modelAbout h3{
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: center;
+    width: 40%;
+}
+.models div .modelAbout p{
+    padding: 2rem;
+    text-align: center;
+}
+/* this is to make the product page more responsive  at screen size of 950px*/
+@media (max-width: 950px) {
+    .models div .modelAbout {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #ffffff;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .models div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .model2 {
+        flex-direction: column-reverse;
+    }
+
+    .models   div .modelImg {
+        height: 30em; 
+        width: 48em;
+    }
+
+    .models   div .modelImg img {
+        width: inherit; 
+        height: inherit;
+    }
+    .productPage .specs .specImg img{
+        width: 45rem;
+        height: 36rem;
+    }
+}
+/* this is to make the product page more responsive  at screen size of 649px*/
+
+@media (max-width: 649px) {
+    .productPage .models   div .modelImg{
+        height: 21rem;
+        width:  30rem;
+    }
+    .productPage .specs .specImg img{
+        width: 30rem;
+        height: 20rem;
+    }
+    .productPage .table-container1{
+        top: 12rem;
+        top: 100rem;
+        left: 10rem;
+    }
+    .productPage .table-container2{
+        top: 6rem;
+        top: 100rem;
+        left: 14rem;
+    }
+    .productPage .table-container3{
+        top: 13rem;
+        top: 100rem;
+        left: 17rem;
+    }
+    .specImg1:hover +.table-container1{
+        top: 12rem;
+        left: 10rem;
+    }
+    .specImg2:hover +.table-container2{
+        top: 6rem;
+        left: 14rem;
+
+    }
+    .specImg3:hover +.table-containerx3{
+        top: 13rem;
+        left: 17rem;
+
+    }
+    .specImg1:hover +.table-container1,
+    .specImg2:hover +.table-container2,
+    .specImg3:hover +.table-container3
+    {
+        transform: rotate(-360deg);
+        transition: all 1.8s linear;
+        z-index: 1;
+    }
+
+}
+/* this is to style the specs div */
+.specs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.specs section{
+    position: relative ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.specs section h2{
+margin-top: 2rem;
+    color: #ffffff;
+    font-size: 2.5rem;
+}
+/* this is to set the image of spec image */
+.specImg img{
+    position: relative;
+    z-index: 0;
+    width: 55rem;
+    height: 38rem;
+}
+.table-container {
+    max-width: 600px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    opacity: .94;
+    position: absolute;
+    z-index: -1;
+    top:14rem;
+    left:10rem;
+}
+/* this is to give hover effect */
+.table-container:hover{
+    z-index: 1;
+}
+/* this is to style the table  */
+.table-container table {
+
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-container th, td {
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-bottom: 1px solid #96a5a5;
+    text-align: left;
+}
+.table-container th {
+    background-color: #6ea1af;
+    font-weight: bold;
+}
+.table-container tr {
+    background-color: #87bccb;
+}
+.table-container table tr:hover {
+    background-color: #f5f5f5;
+    background-color: #5c8590;
+}
+/* this is to position the table container 1 */
+.table-container1{
+    top: 12rem;
+    left: 10rem;
+}
+/* this is to position the table container 2 */
+.table-container2{
+    top: 6rem;
+    left: 14rem;
+}
+/* this is to position the table container 3 */
+.table-container3{
+        top: 13rem;
+    left: 17rem;
+}
+/* this is to give hover effect on the hovering th e image  */
+.specImg1:hover +.table-container1,
+.specImg2:hover +.table-container2,
+.specImg3:hover +.table-container3
+{
+    transform: rotate(-360deg);
+    transition: transform 1.8s linear;
+    z-index: 1;
+}
+/* this is for the breathing animation */
+@keyframes breathing {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    100% {
+      transform: scale(1);
+      z-index: 1;
+    }
+    
+  }
+
+
+/* about page */
+/* this  is setting the background image for the about page  */
+.aboutPage .backgroundImg{
+    background-image: url('../images/fordFront.png');
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+/* this is for the hero section of the about page */
+.aboutPage .hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.aboutPage .heroImg{
+    width: 100%;
+  overflow: hidden;
+  height: 45rem;
+}
+.aboutPage .heroImg img{
+    width: 100%;
+}
+.aboutPage .herotxt {
+    margin-top: 2rem;  
+    width: 90%;
+}
+.aboutPage .herotxt h1{
+    font-size: 7rem;
+}
+.aboutPage .herotxt p{
+    text-align: justify;
+    font-size: 1.4rem;
+}
+/* this is setting the main section of the about page */
+.aboutPage main{
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    margin: auto;
+}
+
+.aboutPage section:nth-child(odd){
+    border-radius: 1rem;
+}
+
+.aboutPage section:nth-child(even){
+    border-radius: 1rem;
+}
+/* this is setting the display to flex and arranging the child elements in coloumn */
+.aboutPage section{
+    padding: 1rem;
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition:all 2.2s linear;
+}
+.aboutPage section h2{
+    font-size: 4rem;
+}
+/* this is setting up the styles of the div in the section */
+.aboutPage section div{
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 27rem;
+}
+/* this is styling the sectxt class div in the sections */
+.aboutPage section div .secTxt{
+    width: 35rem;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.3rem;
+    transform: translateY(-24rem);
+    position: relative;
+    z-index: 1;
+    background-color: rgb(164, 206, 213);
+    opacity: .9;
+}
+/* this is styling the sectxt1 class div in the sections */
+.aboutPage section div .secTxt1{
+    width: 35rem;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.3rem;
+    transform: translateY(-46rem);
+    position: relative;
+    z-index: 1;
+    background-color: rgb(164, 206, 213);
+    opacity: .9;
+}
+.aboutPage .vision .secTxt1{
+    transform: translateY(-43rem);
+}
+.aboutPage .customer .secTxt1{
+    transform: translateY(-43rem);
+}
+.aboutPage .products .secTxt1{
+    transform: translateY(-48rem);
+}
+.aboutPage .products .secTxt{
+    transform: translateY(-25rem);
+}
+.aboutPage section div img{
+    width: 40rem;
+    height: 25rem;
+    border-radius: 1rem;
+}
+/* this is to give a hover effect */
+.aboutPage section .secImg:hover{
+    position: relative;
+    z-index: 2;
+}
+.aboutPage section div div{
+    transition: transform 2.2s ease-in-out ;
+    position: relative;
+}
+.aboutPage section div   img {
+    position: relative;
+    z-index: 2;
+}
+/* the codes are to give the hover effect that the text slides from under the image  */
+.aboutPage section .secImg:hover + .secTxt {
+    transform:translateY(2rem) ;
+}
+.aboutPage section .secImg:hover ~ .secTxt1 {
+    transform:translateX(43rem) translateY(-46rem) ;
+}
+.aboutPage .vision .secImg:hover ~ .secTxt1 {
+    transform:translateX(-43rem) translateY(-43rem) ;
+}
+.aboutPage .customer .secImg:hover ~ .secTxt1 {
+    transform:translateX(43rem) translateY(-43rem) ;
+}
+.aboutPage .products .secImg:hover ~ .secTxt1 {
+    transform:translateX(-43rem) translateY(-48rem) ;
+}
+.aboutPage main section:nth-child(odd) div,
+.aboutPage main section:nth-child(odd) 
+{
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.aboutPage main section:nth-child(even) div,
+.aboutPage main section:nth-child(even){
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+/* this is to amke the page more responsive  */
+@media (max-width: 1300px) {
+    .aboutPage section .secImg:hover ~ .secTxt1 {
+        transform:translateX(0rem) translateY(4rem) ;
+    }
+    .aboutPage .vision .secImg:hover ~ .secTxt1 {
+        transform:translateX(0rem) translateY(4rem) ;
+    }
+    .aboutPage .customer .secImg:hover ~ .secTxt1 {
+        transform:translateX(0rem) translateY(4rem) ;
+    }
+    .aboutPage .products .secImg:hover ~ .secTxt1 {
+        transform:translateX(0rem) translateY(4rem) ;
+    }
+    .aboutPage .products .secImg:hover ~ .smScreen1 {
+        transform: translateY(46rem);
+    }
+
+    .aboutPage main .smScreen1{
+        transform: translateY(46rem);
+    }
+    .aboutPage main .smScreen2{
+        transform: translateY(46rem);
+    }
+    .aboutPage main .smScreen3{
+        transform: translateY(126rem);
+    }
+}
+
+/* this is contact page css code */
+
+/* this is to setup the background image on the contact page */
+.contactPage .backgroundImg{
+    background-image: url('../images/cobra.jpg');
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+
+.contactPage .options{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactPage .options1{
+    margin-top: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.contactPage .options1 section{
+    margin-top: 2rem;
+
+}
+/* making the display flex and alighining the contents in the verticle direction */
+.contactPage section{
+    margin: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contactPage section div img{
+    width: 10rem;
+    height: 10rem;
+}
+.contactPage section .sectionTxt{
+    display: none;
+}
+.contactPage .sectionImgShake{
+    animation: rotate1 2s infinite;
+}
+/* this is the code for the rotate1 animation */
+@keyframes rotate1 {
+    0%,100% {
+      transform: rotate(0deg);    
+    }
+    25% {
+          transform: rotate(15deg);    
+        }
+    50% {
+        transform: rotate(-0deg);    
+    }
+    75% {
+        transform: rotate(-15deg);    
+    }
+  }
+  
+  
+  
+/* contact page form */
+/* this is to style the contact form div  */
+.contactForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.8), transparent);
+}
+.contactForm form div{
+    margin: 1rem 0rem;
+}
+/* this is to align the items in the form  */
+.contactForm form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+/* this is styling the textarea */
+.contactForm form textarea{
+    resize: none;
+    width: 21rem;
+    border: 1px solid #e0dfdf;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Box shadow on right and bottom */
+    text-align: center;
+}
+/* this is styling the option input in the form */
+.contactForm form option{
+    color: black;
+    text-align: center;
+}
+/* this is styling the select input in the form */
+.contactForm form select{
+    margin: 0rem 2rem;
+    width: 20rem;
+    height: 2.5rem;
+    text-align: center;
+    border: 1px solid #e0dfdf;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Box shadow on right and bottom */
+    color: black;
+}
+/* this is to style all the input in the form  */
+.contactForm form input{
+    text-align: center;
+    margin: 0rem 2rem;
+    width: 21rem;
+    height: 2.5rem;
+    border: 1px solid #e0dfdf;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Box shadow on right and bottom */
+  
+}
+.contactForm form .checkboxInput {
+    background-color: #c5c5c5;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5), transparent);
+    color: white;
+}
+.contactForm form .checkboxInput input{
+    margin: 0rem 2rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.contactForm form .checkboxInput .carOptions{
+    position: relative;
+}
+.contactForm form .checkboxInput input{
+    width: 2rem;
+    display: none;
+}
+/* this is styling the div in the div with singleOption class */
+.contactForm form .checkboxInput .singleOption div{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 5rem;
+    transition: all .15s linear;
+}
+.contactForm form .checkboxInput .allOptions{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0rem;
+}
+.contactForm form .checkboxInput .singleOption div{
+    border: 2px solid white;
+}
+/* this is to give the coloured box effect when selected  */
+.contactForm form .checkboxInput input:checked +div{
+    background-color: rgb(126, 200, 193);
+}
+/* this si styling the utton in the form */
+.contactForm form button{
+    width: 17rem;
+    height: 5rem;
+    border-radius: .7rem;
+    font-size: 1.2rem;
+    background-color: #8bb5b5;
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+}
+.contactForm form button:hover{
+    background-color: #557070;
+    animation: shake .8s;
+    animation-iteration-count: infinite;
+
+}
+/* this is the shake animation keyframes */
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(7deg); }
+    50% { transform: rotate(-7deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+/* this is to make the options in the contact page more responsive */
+@media (max-width: 649px) {
+    .contactPage .options{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+.contactPage .sectionTxt2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 18rem;
+    color: white;
+    font-size: 1rem;
+    background-color: rgba(77, 70, 70, 0.4);
+}
+
+.contactPage .sectionTxt3 p{
+    color: white;
+    font-size: 1rem;
+    background-color: rgba(72, 63, 63, 0.4);
+}
+/* footer code */
+a{
+    color: white;
+
+}
+/* this is to set the height and width of the footer  */
+footer{
+    width: 90%; 
+    margin-top: 2rem;
+    padding: 5rem;
+    color: white;
+    height: 13rem;
+    background-color: rgba(14, 13,13, .8); /* Red color with 50% opacity */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1.1rem;
+}
+footer .social a{
+    padding: 1rem;
+}
+footer .social img{
+    height: 2rem;
+    width: 2rem;
+}
+footer p{
+    padding: 1rem;
+    
+}
+@media (max-width: 750px) {
+    footer{
+        flex-direction: column;
+    }
+
+
+}

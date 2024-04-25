@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <meta name="robots" content="noindex, nofollow" >
+    <meta name="description" content="this is the contact page of the website" >
+    <title>Micro Website</title>
+    <!-- linking the css file -->
+    <link rel="stylesheet" href="./css/style.css" >
+    <!-- linking the jquery file -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <!-- linking the js file -->
+    <script  src="./js/script.js"></script>
+        <!-- inserting fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">        
+  </head>
+  <body class="contactPage">
+    <!-- this will show different methods of communication -->
+    <div class="options">
+      <section>
+        <div class="sectionImg1">
+          <img src="./images/contactForm.png" alt="contactForm"  >
+        </div>
+        <h2>Contact Form</h2>
+        <div class="sectionTxt1 sectionTxt">
+          <div class="contactForm">
+            <!-- this is the contact form of the website -->
+            <form action="someplace.php" method="post">
+              <div class="formName">
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="First Name:"
+                  required
+                 >
+              </div>
+              <div>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Last Name:"
+                  required
+                 >
+              </div>
+              <div>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email:"
+                  required
+                 >
+              </div>
+
+              <div>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  placeholder="Phone Number:"
+                  required
+                 >
+
+              </div>
+
+              <div>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  cols="30"
+                  placeholder="What is your message?"
+                  required
+                ></textarea>
+              </div>
+              <div>
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder="City:"
+                  required
+                 >
+              </div>
+              <div>
+                <input
+                  type="text"
+                  id="zip"
+                  name="zip"
+                  placeholder="Zip Code"
+                  required
+                 >
+              </div>
+              <div>
+                <select id="country" name="country" required>
+                  <option value="" disabled selected>Select Country</option>
+                  <option value="USA">United States</option>
+                  <option value="CA">Canada</option>
+                  <option value="UK">United Kingdom</option>
+                </select>
+              </div>
+              <div class="checkboxInput">
+                <div class="modelOptions allOptions">
+                  <h3>Interested in:</h3>
+                  <div class="modelOption singleOption">
+                    <input
+                      type="radio"
+                      id="interest-mustang"
+                      name="interest"
+                      value="mustang"
+                     >
+                    <div>
+                      <label for="interest-mustang">Ford Mustang</label>
+                    </div>
+                  </div>
+
+                  <div class="modelOption singleOption">
+                    <input
+                      type="radio"
+                      id="interest-gt"
+                      name="interest"
+                      value="gt"
+                     >
+                    <div>
+                      <label for="interest-gt">Ford GT</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="checkboxInput">
+                <h3>Interested in:</h3>
+                <div class="featureOptions allOptions">
+                  <div class="featureOption singleOption">
+                    <input
+                      type="checkbox"
+                      id="comfort"
+                      name="likes"
+                      value="Comfort"
+                     >
+                    <div>
+                      <label for="comfort">Comfort</label>
+                    </div>
+                  </div>
+                  <div class="featureOption singleOption">
+                    <input
+                      type="checkbox"
+                      id="performance"
+                      name="likes"
+                      value="Performance"
+                     >
+                    <div>
+                      <label for="performance">Performance</label>
+                    </div>
+                  </div>
+                  <div class="featureOption singleOption">
+                    <input
+                      type="checkbox"
+                      id="design"
+                      name="likes"
+                      value="Design"
+                     >
+                    <div>
+                      <label for="design">Design</label>
+                    </div>
+                  </div>
+                  <div class="featureOption singleOption">
+                    <input
+                      type="checkbox"
+                      id="technology"
+                      name="likes"
+                      value="Technology"
+                     >
+                    <div>
+                      <label for="technology">Technology</label>
+                    </div>
+                  </div>
+                  <div class="featureOption singleOption">
+                    <input
+                      type="checkbox"
+                      id="safety"
+                      name="likes"
+                      value="Safety"
+                     >
+                    <div>
+                      <label for="safety">Safety</label>
+                    </div>
+                  </div>
+                  <div class="featureOption singleOption">
+                    <input
+                      type="checkbox"
+                      id="fuel-efficiency"
+                      name="likes"
+                      value="Fuel Efficiency"
+                     >
+                    <div>
+                      <label for="fuel-efficiency">Fuel Efficiency</label>
+                    </div>
+                  </div>
+                  <div class="featureOption singleOption">
+                    <input
+                      type="checkbox"
+                      id="handling"
+                      name="likes"
+                      value="Handling"
+                     >
+                    <div>
+                      <label for="handling">Handling</label>
+                    </div>
+                  </div>
+                  <div class="featureOption singleOption">
+                    <input
+                      type="checkbox"
+                      id="audio-system"
+                      name="likes"
+                      value="Audio System"
+                     >
+
+                    <div>
+                      <label for="audio-system">Audio System</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- this section will show us the call option -->
+      <section>
+        <div class="sectionImg2">
+          <img src="./images/contactCall.png" alt="contactCall"  >
+        </div>
+        <h2>Call us</h2>
+        <div class="sectionTxt2 sectionTxt">
+            <div>
+                You can all on our Toll-Free number +1 999 999 9999
+            </div>
+            <div>You can also call us 24/7 on +1 777 777 7777</div>
+        </div>
+      </section>
+            <!-- this section will show us the email option -->
+      <section>
+        <div class="sectionImg3">
+          <img src="./images/contactEmail.png" alt="contactEmail"  >
+        </div>
+        <h2>Email Us</h2>
+        <div class="sectionTxt3 sectionTxt">
+            <p>
+                You can Email us on sukhjotsingh441@gmail.com.
+            </p>
+        </div>
+      </section>
+    </div>
+    <div class="backgroundImg"></div>
+  </body>
+</html>
